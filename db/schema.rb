@@ -10,7 +10,42 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170515014114) do
+ActiveRecord::Schema.define(version: 20170515022315) do
+
+  create_table "agreements", force: :cascade do |t|
+    t.string   "code"
+    t.integer  "renter_id"
+    t.integer  "employee_id"
+    t.date     "date_contract"
+    t.integer  "status"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+    t.index ["employee_id"], name: "index_agreements_on_employee_id"
+    t.index ["renter_id"], name: "index_agreements_on_renter_id"
+  end
+
+  create_table "devices", force: :cascade do |t|
+    t.string   "name"
+    t.string   "code"
+    t.string   "price"
+    t.string   "status"
+    t.integer  "room_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["room_id"], name: "index_devices_on_room_id"
+  end
+
+  create_table "employees", force: :cascade do |t|
+    t.string   "name"
+    t.date     "birthday"
+    t.integer  "sex"
+    t.string   "phone"
+    t.string   "address"
+    t.date     "start_date"
+    t.date     "end_date"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "kind_rooms", force: :cascade do |t|
     t.string   "name"
@@ -54,6 +89,14 @@ ActiveRecord::Schema.define(version: 20170515014114) do
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
     t.index ["kind_room_id"], name: "index_rooms_on_kind_room_id"
+  end
+
+  create_table "services", force: :cascade do |t|
+    t.string   "name"
+    t.string   "code"
+    t.integer  "price"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|

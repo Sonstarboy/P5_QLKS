@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  resources :agreements
+  resources :employees
+  resources :services
+  resources :devices
   resources :rooms
   resources :kind_rooms
   resources :renters
