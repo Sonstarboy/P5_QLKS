@@ -1,0 +1,21 @@
+<%= simple_form_for(@agreement_service) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+
+    <%= f.association :agreement %>
+
+    <%= f.association :service %>
+
+    <%= f.input :unit_price %>
+
+    <%= f.input :amount %>
+
+    <%= f.input :total_amount %>
+
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>
