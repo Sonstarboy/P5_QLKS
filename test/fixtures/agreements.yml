@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  code: MyString
+  renter: one
+  employee: one
+  date_contract: 2017-05-15
+  status: 1
+
+two:
+  code: MyString
+  renter: two
+  employee: two
+  date_contract: 2017-05-15
+  status: 1
