@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  agreement: one
+  code: MyString
+  bill_date: 2017-05-15
+  other_cost: 1
+  total_amount: 1
+  description: MyString
+
+two:
+  agreement: two
+  code: MyString
+  bill_date: 2017-05-15
+  other_cost: 1
+  total_amount: 1
+  description: MyString

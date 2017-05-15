@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Agreement Services</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Agreement</th>
+      <th>Service</th>
+      <th>Unit price</th>
+      <th>Amount</th>
+      <th>Total amount</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @agreement_services.each do |agreement_service| %>
+      <tr>
+        <td><%= agreement_service.agreement %></td>
+        <td><%= agreement_service.service %></td>
+        <td><%= agreement_service.unit_price %></td>
+        <td><%= agreement_service.amount %></td>
+        <td><%= agreement_service.total_amount %></td>
+        <td><%= link_to 'Show', agreement_service %></td>
+        <td><%= link_to 'Edit', edit_agreement_service_path(agreement_service) %></td>
+        <td><%= link_to 'Destroy', agreement_service, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Agreement Service', new_agreement_service_path %>

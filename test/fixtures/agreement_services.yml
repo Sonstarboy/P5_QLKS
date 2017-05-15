@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  agreement: one
+  service: one
+  unit_price: 1
+  amount: 1
+  total_amount: 1
+
+two:
+  agreement: two
+  service: two
+  unit_price: 1
+  amount: 1
+  total_amount: 1

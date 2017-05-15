@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Bill:</strong>
+  <%= @bill_detail.bill %>
+</p>
+
+<p>
+  <strong>Service:</strong>
+  <%= @bill_detail.service %>
+</p>
+
+<p>
+  <strong>Unit price:</strong>
+  <%= @bill_detail.unit_price %>
+</p>
+
+<p>
+  <strong>Amount:</strong>
+  <%= @bill_detail.amount %>
+</p>
+
+<p>
+  <strong>Total:</strong>
+  <%= @bill_detail.total %>
+</p>
+
+<%= link_to 'Edit', edit_bill_detail_path(@bill_detail) %> |
+<%= link_to 'Back', bill_details_path %>

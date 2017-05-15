@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Agreement:</strong>
+  <%= @agreement_service.agreement %>
+</p>
+
+<p>
+  <strong>Service:</strong>
+  <%= @agreement_service.service %>
+</p>
+
+<p>
+  <strong>Unit price:</strong>
+  <%= @agreement_service.unit_price %>
+</p>
+
+<p>
+  <strong>Amount:</strong>
+  <%= @agreement_service.amount %>
+</p>
+
+<p>
+  <strong>Total amount:</strong>
+  <%= @agreement_service.total_amount %>
+</p>
+
+<%= link_to 'Edit', edit_agreement_service_path(@agreement_service) %> |
+<%= link_to 'Back', agreement_services_path %>

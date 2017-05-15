@@ -10,7 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170515022315) do
+ActiveRecord::Schema.define(version: 20170515030736) do
+
+  create_table "agreement_services", force: :cascade do |t|
+    t.integer  "agreement_id"
+    t.integer  "service_id"
+    t.integer  "unit_price"
+    t.integer  "amount"
+    t.integer  "total_amount"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.index ["agreement_id"], name: "index_agreement_services_on_agreement_id"
+    t.index ["service_id"], name: "index_agreement_services_on_service_id"
+  end
 
   create_table "agreements", force: :cascade do |t|
     t.string   "code"
@@ -22,6 +34,30 @@ ActiveRecord::Schema.define(version: 20170515022315) do
     t.datetime "updated_at",    null: false
     t.index ["employee_id"], name: "index_agreements_on_employee_id"
     t.index ["renter_id"], name: "index_agreements_on_renter_id"
+  end
+
+  create_table "bill_details", force: :cascade do |t|
+    t.integer  "bill_id"
+    t.integer  "service_id"
+    t.integer  "unit_price"
+    t.integer  "amount"
+    t.integer  "total"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["bill_id"], name: "index_bill_details_on_bill_id"
+    t.index ["service_id"], name: "index_bill_details_on_service_id"
+  end
+
+  create_table "bills", force: :cascade do |t|
+    t.integer  "agreement_id"
+    t.string   "code"
+    t.date     "bill_date"
+    t.integer  "other_cost"
+    t.integer  "total_amount"
+    t.string   "description"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.index ["agreement_id"], name: "index_bills_on_agreement_id"
   end
 
   create_table "devices", force: :cascade do |t|
