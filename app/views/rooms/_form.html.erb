@@ -1,0 +1,19 @@
+<%= simple_form_for(@room) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+
+    <%= f.input :name %>
+
+    <%= f.input :code %>
+
+    <%= f.input :status %>
+
+    <%= f.association :kind_room %>
+
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

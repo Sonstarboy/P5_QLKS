@@ -1,0 +1,2 @@
+class KindRoom < ApplicationRecord
+end

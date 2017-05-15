@@ -10,13 +10,50 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170314023438) do
+ActiveRecord::Schema.define(version: 20170515014114) do
+
+  create_table "kind_rooms", force: :cascade do |t|
+    t.string   "name"
+    t.string   "code"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "names", force: :cascade do |t|
+    t.string   "code"
+    t.integer  "status"
+    t.integer  "kind_room_id"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.index ["kind_room_id"], name: "index_names_on_kind_room_id"
+  end
+
+  create_table "renters", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "sex"
+    t.string   "address"
+    t.string   "id_number"
+    t.string   "phone"
+    t.string   "citizenship"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
 
   create_table "roles", force: :cascade do |t|
     t.string   "code"
     t.string   "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "rooms", force: :cascade do |t|
+    t.string   "name"
+    t.string   "code"
+    t.integer  "status"
+    t.integer  "kind_room_id"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.index ["kind_room_id"], name: "index_rooms_on_kind_room_id"
   end
 
   create_table "users", force: :cascade do |t|
