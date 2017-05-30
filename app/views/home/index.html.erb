@@ -1,2 +1,122 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+<div class="row">
+  <div id="products" class="row list-group">
+    <div class="item  col-xs-3 col-lg-3">
+      <div class="thumbnail">
+        <div class="caption">
+          <h4 class="group inner list-group-item-heading">
+            <b>Quản lý loại phòng</b></h4>
+          Quản lý loại phòng của khách sạn
+          <div class="row">
+            <div class="col-xs-12 col-md-6 pull-right">
+              <a class="btn btn-success  pull-right" href="<%= kind_rooms_path%>">Chi tiết</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="item  col-xs-3 col-lg-3">
+      <div class="thumbnail">
+        <div class="caption">
+          <h4 class="group inner list-group-item-heading">
+            <b>Quản lý phòng</b></h4>
+          Quản lý phòng của khách sạn
+          <div class="row">
+            <div class="col-xs-12 col-md-6 pull-right">
+              <a class="btn btn-success  pull-right" href="<%= rooms_path%>">Chi tiết</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="item  col-xs-3 col-lg-3">
+      <div class="thumbnail">
+        <div class="caption">
+          <h4 class="group inner list-group-item-heading">
+            <b>Quản lý thiết bị</b></h4>
+          Quản lý thiết bị theo phòng
+          <div class="row">
+            <div class="col-xs-12 col-md-6 pull-right">
+              <a class="btn btn-success pull-right" href="<%= devices_path%>">Chi tiết</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="item  col-xs-3 col-lg-3">
+      <div class="thumbnail">
+        <div class="caption">
+          <h4 class="group inner list-group-item-heading">
+            <b>Quản lý dịch vụ</b></h4>
+          Quản lý dịch vụ sử dụng
+          <div class="row">
+            <div class="col-xs-12 col-md-6 pull-right">
+              <a class="btn btn-success pull-right" href="<%= services_path%>">Chi tiết</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="row">
+  <div id="products" class="row list-group">
+    <div class="item  col-xs-3 col-lg-3">
+      <div class="thumbnail">
+        <div class="caption">
+          <h4 class="group inner list-group-item-heading">
+            <b>Quản lý nhân viên</b></h4>
+          Quản lý thông tin nhân viên
+          <div class="row">
+            <div class="col-xs-12 col-md-6 pull-right">
+              <a class="btn btn-success  pull-right" href="<%= employees_path%>">Chi tiết</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="item  col-xs-3 col-lg-3">
+      <div class="thumbnail">
+        <div class="caption">
+          <h4 class="group inner list-group-item-heading">
+            <b>Quản lý khách thuê</b></h4>
+          Quản lý thông tin khách thuê<br>
+          <div class="row">
+            <div class="col-xs-12 col-md-6 pull-right">
+              <a class="btn btn-success  pull-right" href="<%= renters_path%>">Chi tiết</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="item  col-xs-3 col-lg-3">
+      <div class="thumbnail">
+        <div class="caption">
+          <h4 class="group inner list-group-item-heading">
+            <b>Quản lý hợp đồng</b></h4>
+          Quản lý hợp đồng thuê phòng
+          <div class="row">
+            <div class="col-xs-12 col-md-6 pull-right">
+              <a class="btn btn-success pull-right" href="<%= agreements_path%>">Chi tiết</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="item  col-xs-3 col-lg-3">
+      <div class="thumbnail">
+        <div class="caption">
+          <h4 class="group inner list-group-item-heading">
+            <b>Quản lý hóa đơn</b></h4>
+          Quản lý hóa đơn thuê phòng
+          <div class="row">
+            <div class="col-xs-12 col-md-6 pull-right">
+              <a class="btn btn-success pull-right" href="<%= agreements_path%>">Chi tiết</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
